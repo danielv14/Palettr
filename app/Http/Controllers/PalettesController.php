@@ -100,6 +100,8 @@ class PalettesController extends Controller
 
         $palette->delete();
 
+        return redirect()->action('ProfileController@index');
+
 
     }
 }
