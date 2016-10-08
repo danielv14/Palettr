@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\PaletteRequest;
+
+use Auth;
+
+use App\Palette;
 
 class PalettesController extends Controller
 {
@@ -20,23 +24,13 @@ class PalettesController extends Controller
 
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('palettes.create');
     }
 
     /**
@@ -45,9 +39,13 @@ class PalettesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PaletteRequest $request)
     {
-        //
+        $palette = new Palette($request->all());
+
+        Auth::user()->palettes()->save($palette);
+
+        return redirect()->action('ProfileController@index');
     }
 
     /**
@@ -58,7 +56,7 @@ class PalettesController extends Controller
      */
     public function show($id)
     {
-        //
+        $palette = Palette::findOrFail($id);
     }
 
     /**
@@ -69,7 +67,8 @@ class PalettesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $palette = Palette::findOrFail($id);
+        return view('palettes.edit', compact('palette'));
     }
 
     /**
@@ -79,9 +78,14 @@ class PalettesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PaletteRequest $request, $id)
     {
-        //
+      $palette = Palette::findOrFail($id);
+
+      $palette->user()->associate(Auth::user()->id)->update($request->all());
+
+      return redirect()->action('ProfileController@index');
+
     }
 
     /**
@@ -92,6 +96,10 @@ class PalettesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $palette = Palette::findOrFail($id);
+
+        $palette->delete();
+
+
     }
 }
