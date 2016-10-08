@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+    * Get the palettes of a user
+    */
+    public function palettes()
+    {
+      return $this->hasMany('App\Palette');
+    }
 }
