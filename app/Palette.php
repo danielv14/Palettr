@@ -12,7 +12,7 @@ class Palette extends Model
    * @var array
    */
   protected $fillable = [
-      'color1', 'color2', 'color3', 'color4'
+      'color1', 'color2', 'color3', 'color4', 'user_id'
   ];
 
   /*
