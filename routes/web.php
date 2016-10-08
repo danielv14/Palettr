@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index');
 // Wrap profile specific routes
 Route::group(['prefix' => 'profile'], function() {
 
-  Route::get('/', 'PalettesController@index');
+  Route::get('/', 'ProfileController@index');
 
   Route::resource('palettes', 'PalettesController');
 
