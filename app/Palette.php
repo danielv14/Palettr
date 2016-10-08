@@ -12,8 +12,15 @@ class Palette extends Model
    * @var array
    */
   protected $fillable = [
-      'color1', 'color2', 'color3', 'color4', 'user_id'
+      'color1', 'color2', 'color3', 'color4',
   ];
+
+  /**
+   * The attributes that aren't mass assignable.
+   *
+   * @var array
+   */
+  protected $guarded = ['user_id'];
 
   /*
   * get the user attached to a palette
