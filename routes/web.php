@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+// Wrap profile specific routes
+Route::group(['prefix' => 'profile'], function() {
+
+  Route::get('/', function () {
+    return view('welcome');
+  });
+
+  Route::resource('palettes', 'PalettesController');
+
+});
