@@ -24,6 +24,9 @@ Route::group(['prefix' => 'profile'], function() {
 
   Route::get('/', 'ProfileController@index');
 
+  // get user by id
+  Route::get('{id}', 'ProfileController@profile')->name('profile');
+
   Route::resource('palettes', 'PalettesController');
 
 });
