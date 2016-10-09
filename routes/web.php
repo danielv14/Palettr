@@ -26,6 +26,7 @@ Route::group(['prefix' => 'profile'], function() {
   // get user by id
   Route::get('{id}', 'ProfileController@profile')->name('profile');
 
+  // CRUD resource for palettes
   Route::resource('palettes', 'PalettesController');
 
 });
