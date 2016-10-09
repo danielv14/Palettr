@@ -1,3 +1,6 @@
+{{-- Error handling --}}
+@include('errors.list')
+
 {!! Form::label('color1', 'First color') !!}
 {!! Form::text('color1') !!}
 <br>
