@@ -78,6 +78,8 @@
             </div>
         </nav>
 
+        @include('partials.flash')
+
         @yield('content')
     </div>
 

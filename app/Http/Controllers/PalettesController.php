@@ -45,6 +45,8 @@ class PalettesController extends Controller
 
         Auth::user()->palettes()->save($palette);
 
+        session()->flash('flash_message', 'Palette has been created');
+
         return redirect()->action('ProfileController@index');
     }
 
@@ -84,6 +86,8 @@ class PalettesController extends Controller
 
       $palette->user()->associate(Auth::user()->id)->update($request->all());
 
+      session()->flash('flash_message', 'Palette has been updated');
+
       return redirect()->action('ProfileController@index');
 
     }
@@ -99,6 +103,8 @@ class PalettesController extends Controller
         $palette = Palette::findOrFail($id);
 
         $palette->delete();
+
+        session()->flash('flash_message', 'Palette has been deleted');
 
         return redirect()->action('ProfileController@index');
 
