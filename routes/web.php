@@ -20,7 +20,8 @@ Route::get('/home', 'HomeController@index');
 // Wrap profile specific routes
 Route::group(['prefix' => 'profile'], function() {
 
-  Route::get('/', 'ProfileController@index');
+  // get current logged in user
+  Route::get('/', 'ProfileController@index')->middleware('auth');
 
   // get user by id
   Route::get('{id}', 'ProfileController@profile')->name('profile');
