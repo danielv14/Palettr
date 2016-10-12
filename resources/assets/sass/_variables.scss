@@ -1,4 +1,9 @@
 $primary-color: #5DC8B9;
+$brand-info: #a5dff9;
+$brand-danger: #ef5285;
+$brand-success: #60c5ba;
+$brand-warning: #feee7d;
+
 
 /*
 * Navigation bar variables
@@ -19,3 +24,9 @@ $navbar-default-toggle-border-color: none;
 $link-color: $primary-color;
 $link-hover-color: darken($primary-color, 10%);
 $link-hover-decoration: none;
+
+
+/*
+* Buttons
+*/
+$btn-border-radius-base: 7px;
