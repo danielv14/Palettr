@@ -7,7 +7,7 @@
       <div class="box" style="background-color: {{$palette->color4}}"></div>
     </div>
     <div class="palette-info">
-      <p>Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
+      <p class="text-muted">Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
       <p class="text-muted">{{ $palette->created_at->diffForHumans() }}</p>
     </div>
   </div>
