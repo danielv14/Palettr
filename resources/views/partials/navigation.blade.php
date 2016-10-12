@@ -14,8 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Recent</a></li>
+        <li><a href="{{ route('popular') }}">Popular</a></li>
+        <li><a href="{{ route('recent') }}">Recent</a></li>
       </ul>
       <!-- Right Side Of Navbar -->
       <ul class="nav navbar-nav navbar-right">

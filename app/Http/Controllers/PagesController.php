@@ -21,4 +21,18 @@ class PagesController extends Controller
         'recent' => $recent
       ]);
     }
+
+    public function popular () {
+      return view('pages.specific', [
+        'header' => 'Popular palettes',
+        'palettes' => Palette::simplePaginate(2)
+      ]);
+    }
+
+    public function recent () {
+      return view('pages.specific', [
+        'header' => 'Most recent palettes',
+        'palettes' => Palette::simplePaginate(2)
+      ]);
+    }
 }

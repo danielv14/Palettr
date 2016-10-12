@@ -12,10 +12,11 @@
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('/popular', 'PagesController@popular')->name('popular');
+Route::get('/recent', 'PagesController@recent')->name('recent');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 // Wrap profile specific routes
 Route::group(['prefix' => 'profile'], function() {

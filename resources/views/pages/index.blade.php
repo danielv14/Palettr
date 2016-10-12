@@ -9,8 +9,9 @@
         @include('partials.palette-loop', [
           'palettes' => $popular,
         ])
+        <br>
         <div class="text-center">
-          <a href="#" class="btn btn-primary">View all popular</a>
+          <a href="{{ route('popular') }}" class="btn btn-primary">View all popular</a>
         </div>
       </div>
     </div>
@@ -21,8 +22,9 @@
         @include('partials.palette-loop', [
           'palettes' => $recent,
         ])
+        <br>
         <div class="text-center">
-          <a href="#" class="btn btn-primary">View all recent</a>
+          <a href="{{ route('recent') }}" class="btn btn-primary">View all recent</a>
         </div>
       </div>
     </div>
