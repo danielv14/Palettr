@@ -1,26 +1,59 @@
 @extends('layouts.app')
 
 @section('content')
-  @if (Auth::check())
-    <a href="{{ route('palettes.create') }}">Create new palette</a>
-    <a href="{{ url('profile') }}">View my profile</a>
-    <a href="{{ url('/logout') }}"
-        onclick="event.preventDefault();
-                 document.getElementById('logout-form').submit();">
-        Logout
-    </a>
-    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-        {{ csrf_field() }}
-    </form>
-  @endif
-  <h1>Welcome to palettr</h1>
-  <h2>All palettes</h2>
 
-  @foreach ($palettes as $palette)
-    <div class="palette">
-      <p>Colors in palette: {{ $palette->color1 }}, {{ $palette->color2 }}, {{ $palette->color3 }}, {{ $palette->color4 }}</p>
-      <p>Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
-      <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Recent</h2>
+        @foreach ($palettes as $palette)
+          <div class="row">
+            <div class="palette">
+              <div class="palette-colors">
+                <div class="box" style="background-color: {{$palette->color1}}"></div>
+                <div class="box" style="background-color: {{$palette->color2}}"></div>
+                <div class="box" style="background-color: {{$palette->color3}}"></div>
+                <div class="box" style="background-color: {{$palette->color4}}"></div>
+              </div>
+              <div class="palette-info">
+                <p>Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
+              </div>
+            </div>
+          </div>
+        @endforeach
+        <div class="text-center">
+          <a href="#" class="btn btn-primary">View all popular</a>
+        </div>
+      </div>
     </div>
-  @endforeach
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Popular</h2>
+        @foreach ($palettes as $palette)
+          <div class="row">
+            <div class="palette">
+              <div class="palette-colors">
+                <div class="box" style="background-color: {{$palette->color1}}"></div>
+                <div class="box" style="background-color: {{$palette->color2}}"></div>
+                <div class="box" style="background-color: {{$palette->color3}}"></div>
+                <div class="box" style="background-color: {{$palette->color4}}"></div>
+              </div>
+              <div class="palette-info">
+                <p>Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
+              </div>
+            </div>
+          </div>
+        @endforeach
+        <div class="text-center">
+          <a href="#" class="btn btn-primary">View all popular</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 @endsection

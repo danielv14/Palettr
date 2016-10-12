@@ -1,0 +1,30 @@
+.hero {
+  background-color: $primary-color;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+
+  a {
+    text-decoration: none;
+  }
+
+  h1, p {
+    color: white;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: 1.1rem;
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}

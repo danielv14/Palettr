@@ -1,17 +1,26 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Normalize
 @import "node_modules/normalize.css/normalize";
 
 // Variables
 @import "variables";
 
+// Mixins
+@import "mixins";
+
 // Bootstrap
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Import thoughtbot libraries
 @import "node_modules/bourbon/app/assets/stylesheets/bourbon";
 // @import "node_modules/bourbon-bitters/app/assets/stylesheets/bitters";
 @import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
+
+
+
+@import "base/text";
+@import "base/general";
+@import "base/buttons";
+
+@import "components/hero";
+@import "components/nav";
+@import "components/palette";

@@ -22,7 +22,19 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+
+      {{-- Include navigation --}}
+      @include('partials.navigation')
+
+      <section class="hero">
+        <div class="hero-content">
+          <a href="/"><h1>Palettr</h1></a>
+          <p>Discover and create beautiful color palettes</p>
+        </div>
+      </section>
+
+
+        {{-- <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -76,7 +88,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
         @include('partials.flash')
 

@@ -1,0 +1,14 @@
+.button {
+  text-decoration: none !important;
+  padding: 1rem 2.3rem;
+}
+
+.button-primary {
+  color: $primary-color;
+  border: 2px solid $primary-color;
+
+  &:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+}

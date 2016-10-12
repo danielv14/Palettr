@@ -1,0 +1,19 @@
+// Fonts
+@import 'https://fonts.googleapis.com/css?family=Raleway:300,400,600';
+@import 'https://fonts.googleapis.com/css?family=Rubik:400,500';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
+
+// General font related styling
+html {
+  font-size: 100%;
+}
+
+h1,h2,h3,h4 {
+  font-family: 'Rubik', sans-serif;
+}
+
+p, a {
+  font-family: 'Montserrat', sans-serif;
+}

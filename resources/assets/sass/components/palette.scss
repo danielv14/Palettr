@@ -1,0 +1,28 @@
+
+.palette {
+  background-color: white;
+  @include palette-box-shadow;
+  width: 100%;
+  margin-top: 20px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+}
+
+.palette-colors {
+  display: flex;
+
+  .box {
+    flex: 1;
+    height: 6.5em;
+
+  }
+}
+
+.palette-info {
+  padding: 1.4rem;
+  p {
+  }
+}
