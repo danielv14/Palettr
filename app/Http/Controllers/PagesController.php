@@ -14,8 +14,11 @@ class PagesController extends Controller
 {
     public function index ()
     {
+      $popular = Palette::orderBy('created_at', 'ASC')->take(3)->get();
+      $recent = Palette::orderBy('created_at', 'DESC')->take(3)->get();
       return view('pages.index', [
-        'palettes' => Palette::all()
+        'popular' => $popular,
+        'recent' => $recent
       ]);
     }
 }

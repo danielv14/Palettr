@@ -7,7 +7,7 @@
       <div class="col-md-8 col-md-offset-2">
         <h2>Popular</h2>
         @include('partials.palette-loop', [
-          'palettes' => $palettes,
+          'palettes' => $popular,
         ])
         <div class="text-center">
           <a href="#" class="btn btn-primary">View all popular</a>
@@ -19,7 +19,7 @@
       <div class="col-md-8 col-md-offset-2">
         <h2>Recent</h2>
         @include('partials.palette-loop', [
-          'palettes' => $palettes,
+          'palettes' => $recent,
         ])
         <div class="text-center">
           <a href="#" class="btn btn-primary">View all recent</a>
