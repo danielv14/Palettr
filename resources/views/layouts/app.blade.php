@@ -32,7 +32,7 @@
           <p>Discover and create beautiful color palettes</p>
         </div>
       </section>
-      
+
       @include('partials.flash')
 
       @yield('content')
