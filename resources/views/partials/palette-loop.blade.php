@@ -7,6 +7,23 @@
       <div class="box" style="background-color: {{$palette->color4}}"></div>
     </div>
     <div class="palette-info">
+
+      @unless (Auth::guest())
+        @if ($palette->user_id == Auth::user()->id)
+          <span class="pull-right">
+            <a href="{{ route('palettes.edit', $palette->id) }}">Edit</a>
+            <br>
+            {!! Form::open([
+              'method' => 'DELETE',
+              'route' => ['palettes.destroy', $palette->id]
+            ]) !!}
+              {!! Form::submit('Delete') !!}
+            {!! Form::close() !!}
+          </span>
+        @endif
+      @endunless
+
+
       <p class="text-muted">Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
       <p class="text-muted">{{ $palette->created_at->diffForHumans() }}</p>
     </div>
