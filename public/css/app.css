@@ -6275,17 +6275,92 @@ body {
     font-weight: bold;
     text-align: center; }
 
-.menu {
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase; }
+.navbar {
+  background: none; }
+  .navbar .toggle, .navbar .brand {
+    display: inline-block; }
+  .navbar .link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    color: white; }
+    .navbar .link:hover, .navbar .link:active {
+      color: #e6e6e6; }
+  .navbar .toggle {
+    padding: 1em;
+    color: white;
+    vertical-align: middle; }
 
-.navbar-default {
-  background: transparent;
-  background-image: none;
-  border-color: transparent;
-  box-shadow: none; }
+@media (min-width: 48em) {
+  .navbar {
+    display: -webkit-box;
+    display: flex; }
+    .navbar .left, .navbar .right {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-flex: 1;
+      flex: 1; }
+    .navbar .link {
+      width: auto; }
+    .navbar .right {
+      -webkit-box-pack: end;
+      justify-content: flex-end; }
+    .navbar .toggle {
+      display: none; } }
+
+.navbar div {
+  display: none; }
+  @media (min-width: 48em) {
+    .navbar div {
+      display: -webkit-box;
+      display: flex; } }
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(120, 227, 237, 0.95);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px; }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1; }
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px; }
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px; }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px; } }
 
 .palette {
   background-color: white;
