@@ -15,8 +15,8 @@
               'method' => 'DELETE',
               'route' => ['palettes.destroy', $palette->id]
             ]) !!}
-            <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-outline">Edit</a>
-              {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-outline']) !!}
+            <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-sm btn-outline">Edit</a>
+              {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline']) !!}
             {!! Form::close() !!}
           </span>
         @endif
