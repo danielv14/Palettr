@@ -1,7 +1,9 @@
 <header id="navigation">
   <nav class="navbar">
     <a href="#" class="toggle" @click.prevent="openNav()">Menu</a>
-
+    <div class="left">
+      <a href="/" class="link brand">Palettr</a>
+    </div>
     <div class="right">
       <a href="{{ route('popular') }}" class="link">Popular</a>
       <a href="{{ route('recent') }}" class="link">Recent</a>
