@@ -6276,7 +6276,8 @@ body {
     text-align: center; }
 
 .navbar {
-  background: none; }
+  background: none;
+  padding-top: 10px; }
   .navbar .toggle, .navbar .brand {
     display: inline-block; }
   .navbar .link {
@@ -6288,6 +6289,8 @@ body {
     color: white; }
     .navbar .link:hover, .navbar .link:active {
       color: #e6e6e6; }
+    .navbar .link:last-child {
+      padding-right: 50px; }
   .navbar .toggle {
     padding: 1em;
     color: white;

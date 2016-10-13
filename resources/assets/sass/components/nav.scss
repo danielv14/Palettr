@@ -4,6 +4,7 @@
 
 .navbar {
   background: none;
+  padding-top: 10px;
   .toggle, .brand {
     display: inline-block;
   }
@@ -16,6 +17,9 @@
     color: white;
     &:hover,&:active {
       color: darken(white, 10%);
+    }
+    &:last-child {
+      padding-right: 50px;
     }
   }
 
