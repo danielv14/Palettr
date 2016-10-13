@@ -1,10 +1,22 @@
 @extends('layouts.app')
 
-@section('content')
-  <h1>Create a palette</h1>
+@section('hero-content')
+  <h1>Create palette</h1>
+  <p>What beautiful palette will you create today, {{ auth()->user()->name }}?</p>
+@endsection
 
-  {!! Form::open(['route' => 'palettes.store']) !!}
-    @include('palettes.form', ['submit' => 'Create palette'])
-  {!! Form::close() !!}
+@section('content')
+  <div class="container">
+    <div class="row content-shadow">
+      <div class="col-md-6 col-md-offset-2">
+        <br>
+        {!! Form::open(['route' => 'palettes.store']) !!}
+          @include('palettes.form', ['submit' => 'Create palette'])
+        {!! Form::close() !!}
+        <br>
+      </div>
+    </div>
+  </div>
+
 
 @endsection
