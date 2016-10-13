@@ -4,8 +4,8 @@
   @include palette-box-shadow;
   width: 100%;
   margin-top: 20px;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
 
   &:last-child {
     margin-bottom: 20px;
