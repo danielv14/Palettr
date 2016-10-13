@@ -4,6 +4,14 @@ const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
 require('laravel-elixir-livereload');
+require('laravel-elixir-imagemin');
+
+// use img as foldername as default 'images'
+elixir.config.images = {
+    folder: 'img',
+    outputFolder: 'img'
+};
+
 
 /*
  |--------------------------------------------------------------------------
@@ -19,5 +27,6 @@ require('laravel-elixir-livereload');
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js')
+       .imagemin()
        .livereload();
 });
