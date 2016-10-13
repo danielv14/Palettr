@@ -11,13 +11,12 @@
       @unless (Auth::guest())
         @if ($palette->user_id == Auth::user()->id)
           <span class="pull-right">
-            <a href="{{ route('palettes.edit', $palette->id) }}">Edit</a>
-            <br>
             {!! Form::open([
               'method' => 'DELETE',
               'route' => ['palettes.destroy', $palette->id]
             ]) !!}
-              {!! Form::submit('Delete') !!}
+            <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-outline">Edit</a>
+              {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-outline']) !!}
             {!! Form::close() !!}
           </span>
         @endif
