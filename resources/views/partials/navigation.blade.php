@@ -28,6 +28,7 @@
   <div id="overlayNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" @click.prevent="closeNav()">&times;</a>
     <div class="overlay-content">
+      <a href="/" class="link">Home</a>
       <a href="{{ route('popular') }}" class="link">Popular</a>
       <a href="{{ route('recent') }}" class="link">Recent</a>
       @if (Auth::guest())
