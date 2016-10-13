@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('hero-content')
+  <a href="/"><h1>Palettr</h1></a>
+  <p>Discover and create beautiful color palettes</p>
+@endsection
+
 @section('content')
   <div class="container">
     <div class="col-md-8 col-md-offset-2">

@@ -23,13 +23,16 @@
 <body>
     <div id="app">
 
-      {{-- Include navigation --}}
-      @include('partials.navigation')
 
+      {{-- Header hero section --}}
       <section class="hero">
-        <div class="hero-content">
-          <a href="/"><h1>Palettr</h1></a>
-          <p>Discover and create beautiful color palettes</p>
+        {{-- Include navigation --}}
+        @include('partials.navigation')
+        <div class="hero-content-wrapper">
+          <div class="hero-text">
+            {{-- hero content is dynamic since its reused --}}
+            @yield('hero-content')
+          </div>
         </div>
       </section>
 
