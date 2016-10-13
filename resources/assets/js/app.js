@@ -23,8 +23,11 @@ const app = new Vue({
       openNav: function() {
         $('#overlayNav').width('100%');
       },
+
+      // close mobile navigation
       closeNav: function() {
         $('#overlayNav').width('0%');
       }
+
     }
 });
