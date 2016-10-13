@@ -1,31 +1,40 @@
 .hero {
-  background-color: $primary-color;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(0deg,
+   transparentize($primary-color, 0.4),
+   transparentize($primary-color, 0.4)),
+   url('../img/pens.jpg') no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+
 }
 
-.hero-content {
+.hero-content-wrapper {
 
-  a {
-    text-decoration: none;
+
+  .hero-text {
+    margin-top: 5.6rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    h1, p {
+      color: white;
+    }
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
+      font-size: 4rem;
+      letter-spacing: 1.1rem;
+      padding-bottom: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
   }
 
-  h1, p {
-    color: white;
-  }
-  h1 {
-    margin: 0;
-    text-align: center;
-    font-weight: 500;
-    font-size: 4rem;
-    letter-spacing: 1.1rem;
-    padding-bottom: 2rem;
-  }
-  p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
+
 }
