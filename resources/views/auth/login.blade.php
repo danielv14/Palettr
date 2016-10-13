@@ -2,7 +2,7 @@
 
 @section('hero-content')
   <h1>Login</h1>
-  <p>Already an user? Login here</p>
+  <p>Start creating palettes and favourite other's</p>
 @endsection
 
 @section('content')
@@ -63,6 +63,7 @@
                   </div>
               </div>
           </form>
+          <br>
         </div>
     </div>
 </div>
