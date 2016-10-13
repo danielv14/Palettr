@@ -14,9 +14,7 @@
     &:hover,&:active {
       color: darken(white, 10%);
     }
-    &:last-child {
-      padding-right: 50px;
-    }
+
   }
 
   .toggle {
@@ -29,6 +27,8 @@
 @media (min-width: 48em) {
     .navbar {
       display: flex;
+      margin-left: 50px;
+      margin-right: 50px;
       .left,.right {
         display: flex;
         flex: 1;
