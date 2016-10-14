@@ -12,6 +12,7 @@
       {{-- Palette partial that loops through each palette --}}
       @include('partials.palette-loop', [
         'palettes' => $palettes,
+        'actions' => false
       ])
 
       {{-- Pagination --}}

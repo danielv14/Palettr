@@ -11,7 +11,10 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h2 class="text-muted">All palettes</h2>
-        @include('partials.palette-loop', ['palettes' => $profile->palettes])
+        @include('partials.palette-loop', [
+          'palettes' => $profile->palettes,
+          'actions' => false
+        ])
       </div>
     </div>
   </div>

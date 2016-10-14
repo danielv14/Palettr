@@ -16,7 +16,10 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h2 class="text-muted">My palettes</h2>
-        @include('partials.palette-loop', ['palettes' => Auth::user()->palettes()->get()])
+        @include('partials.palette-loop', [
+          'palettes' => Auth::user()->palettes()->get(),
+          'actions' => true
+        ])
       </div>
     </div>
   </div>

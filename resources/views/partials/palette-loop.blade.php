@@ -14,17 +14,19 @@
       <p style="color: {{ $palette->color4 }}">{{ $palette->color4 }}</p>
     </div>
     <div class="palette-info">
-      @unless (Auth::guest())
-        @if ($palette->user_id == Auth::user()->id)
-          <span class="pull-right">
-            <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-sm btn-outline">Edit</a>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger btn-sm btn-outline" data-toggle="modal" data-target="#deleteModal">
-              Delete
-            </button>
-          </span>
-        @endif
-      @endunless
+      {{--
+        Only display Update and delete buttons
+        if auth and action are requested from parent view
+      --}}
+      @if ($palette->user_id == Auth::user()->id && $actions == true)
+        <span class="pull-right">
+          <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-sm btn-outline">Edit</a>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-danger btn-sm btn-outline" data-toggle="modal" data-target="#deleteModal">
+            Delete
+          </button>
+        </span>
+      @endif
       <a class="text-muted" href="{{ route('profile', $palette->user->id) }}">
         <img class="avatar avatar-sm" src="{{ Gravatar::get($palette->user->email, 'small') }}" alt="avatar">
         {{ $palette->user->name }}
@@ -34,8 +36,8 @@
   </div>
 @endforeach
 
-{{-- Display a modal with delete functionality unless its a guest --}}
-@unless (Auth::guest())
+{{-- Display a modal with delete functionality if actions are requested --}}
+@if ($palette->user_id == Auth::user()->id && $actions == true)
   <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   <div class="modal-dialog" role="document">
@@ -61,4 +63,4 @@
     </div>
   </div>
 </div>
-@endunless
+@endif

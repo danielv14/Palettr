@@ -13,6 +13,7 @@
         <h2 class="text-muted">Popular</h2>
         @include('partials.palette-loop', [
           'palettes' => $popular,
+          'actions' => false
         ])
         <br>
         <div class="text-center">
@@ -26,6 +27,7 @@
         <h2 class="text-muted">Recent</h2>
         @include('partials.palette-loop', [
           'palettes' => $recent,
+          'actions' => false
         ])
         <br>
         <div class="text-center">
