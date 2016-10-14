@@ -15,6 +15,7 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
+// Vue instance with flashe massage fade out functionality
 require('./flash-message');
 
 
