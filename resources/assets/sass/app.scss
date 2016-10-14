@@ -1,11 +1,9 @@
 // Normalize
 @import "node_modules/normalize.css/normalize";
 
-// Variables
-@import "variables";
+// Utilities
+@import "1-utils/module";
 
-// Mixins
-@import "mixins";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -17,12 +15,11 @@
 
 
 
-@import "base/text";
-@import "base/general";
-@import "base/buttons";
+// base
+@import "2-base/module";
 
-@import "components/hero";
-@import "components/nav";
-@import "components/palette";
-@import "components/alert";
-@import "components/avatar";
+// components
+@import "3-components/module";
+
+// pages
+@import "4-pages/module";
