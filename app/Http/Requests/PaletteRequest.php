@@ -24,10 +24,10 @@ class PaletteRequest extends FormRequest
     public function rules()
     {
         return [
-            'color1' => 'required',
-            'color2' => 'required',
-            'color3' => 'required',
-            'color4' => 'required',
+            'color1' => 'required|color',
+            'color2' => 'required|color',
+            'color3' => 'required|color',
+            'color4' => 'required|color',
         ];
     }
 }

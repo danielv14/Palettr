@@ -4,7 +4,7 @@
   {!! Form::text('color1', null, ['class' => 'form-control']) !!}
   @if ($errors->has('color1'))
       <span class="help-block">
-          <strong>{{ $errors->first('color1') }}</strong>
+          <strong>{{ $errors->first('color1', 'Please enter a valid color') }}</strong>
       </span>
   @endif
 </div>
@@ -15,7 +15,7 @@
   {!! Form::text('color2', null, ['class' => 'form-control']) !!}
   @if ($errors->has('color2'))
       <span class="help-block">
-          <strong>{{ $errors->first('color2') }}</strong>
+          <strong>{{ $errors->first('color2', 'Please enter a valid color') }}</strong>
       </span>
   @endif
 </div>
@@ -26,7 +26,7 @@
   {!! Form::text('color3', null, ['class' => 'form-control']) !!}
   @if ($errors->has('color3'))
       <span class="help-block">
-          <strong>{{ $errors->first('color3') }}</strong>
+          <strong>{{ $errors->first('color3', 'Please enter a valid color') }}</strong>
       </span>
   @endif
 </div>
@@ -37,7 +37,7 @@
   {!! Form::text('color4', null, ['class' => 'form-control']) !!}
   @if ($errors->has('color4'))
       <span class="help-block">
-          <strong>{{ $errors->first('color4') }}</strong>
+          <strong>{{ $errors->first('color4', 'Please enter a valid color') }}</strong>
       </span>
   @endif
 

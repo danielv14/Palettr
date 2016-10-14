@@ -169,6 +169,7 @@ return [
 
          Collective\Html\HtmlServiceProvider::class,
          Creativeorange\Gravatar\GravatarServiceProvider::class,
+         Zenapply\Validator\Providers\ColorValidatorServiceProvider::class,
 
 
         /*

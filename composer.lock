@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "86ecc912d759ef49ac6937630671e48b",
-    "content-hash": "46ecb58d7302d9e1e4b019ae2a5eb51f",
+    "hash": "67fbb8ca71ef0bc3a593163604996aa3",
+    "content-hash": "1ddf83c479ad8aad3f61d3315430c5cd",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1964,6 +1964,55 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "zenapply/laravel-validator-color",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zenapply/laravel-validator-color.git",
+                "reference": "ff309dee324216ce95d4dc7df069bb3ceff371a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zenapply/laravel-validator-color/zipball/ff309dee324216ce95d4dc7df069bb3ceff371a9",
+                "reference": "ff309dee324216ce95d4dc7df069bb3ceff371a9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0",
+                "illuminate/validation": "^5.0",
+                "php": "^5.5.9|^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.2",
+                "phpunit/phpunit": "^4.8|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zenapply\\Validator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tyler Arbon",
+                    "email": "tylercd100@gmail.com"
+                }
+            ],
+            "homepage": "https://github.com/zenapply/laravel-validator-color",
+            "keywords": [
+                "color",
+                "laravel",
+                "tylercd100",
+                "validator",
+                "zenapply"
+            ],
+            "time": "2016-05-11 01:07:25"
         }
     ],
     "packages-dev": [
