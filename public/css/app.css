@@ -6423,8 +6423,8 @@ body {
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out; }
     .color-texts p:hover, .color-texts p .box:hover {
-      -webkit-transform: scale(1.7);
-      transform: scale(1.7); }
+      -webkit-transform: scale(1.4);
+      transform: scale(1.4); }
 
 .alert {
   position: absolute;
