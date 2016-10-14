@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('hero-content')
-  <h1>My profile</h1>
+  <img src="{{Gravatar::get(Auth::user()->email, 'large')}}" alt="" class="avatar avatar-lg">
+  <h2>My profile</h2>
   <p>{{ Auth::user()->palettes()->count() }} Palettes and 3 favourites</p>
   <br>
   <div class="text-center">
