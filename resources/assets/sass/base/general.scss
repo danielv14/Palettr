@@ -2,6 +2,10 @@ body {
   background-color: darken(white, 5%);
 }
 
+#app {
+  margin-bottom: 2rem;
+}
+
 
 .content-shadow {
   @include palette-box-shadow();
