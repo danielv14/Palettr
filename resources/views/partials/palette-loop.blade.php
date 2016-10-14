@@ -18,15 +18,18 @@
         Only display Update and delete buttons
         if auth and action are requested from parent view
       --}}
-      @if ($palette->user_id == Auth::user()->id && $actions == true)
-        <span class="pull-right">
-          <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-sm btn-outline">Edit</a>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-danger btn-sm btn-outline" data-toggle="modal" data-target="#deleteModal">
-            Delete
-          </button>
-        </span>
-      @endif
+      @unless (Auth::guest())
+        @if ($palette->user_id == Auth::user()->id && $actions == true)
+          <span class="pull-right">
+            <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-sm btn-outline">Edit</a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger btn-sm btn-outline" data-toggle="modal" data-target="#deleteModal">
+              Delete
+            </button>
+          </span>
+        @endif
+      @endunless
+
       <a class="text-muted" href="{{ route('profile', $palette->user->id) }}">
         <img class="avatar avatar-sm" src="{{ Gravatar::get($palette->user->email, 'small') }}" alt="avatar">
         {{ $palette->user->name }}
@@ -37,30 +40,32 @@
 @endforeach
 
 {{-- Display a modal with delete functionality if actions are requested --}}
-@if ($palette->user_id == Auth::user()->id && $actions == true)
-  <!-- Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modalLabel">Delete palette</h4>
-      </div>
-      <div class="modal-body lead">
-        Are you sure you want to delete the palette?
-        <br>
-        This action cannot be reversed.
-      </div>
-      <div class="modal-footer">
-        {!! Form::open([
-          'method' => 'DELETE',
-          'route' => ['palettes.destroy', $palette->id]
-        ]) !!}
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-      {!! Form::close() !!}
+@unless (Auth::guest())
+  @if ($palette->user_id == Auth::user()->id && $actions == true)
+    <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Delete palette</h4>
+        </div>
+        <div class="modal-body lead">
+          Are you sure you want to delete the palette?
+          <br>
+          This action cannot be reversed.
+        </div>
+        <div class="modal-footer">
+          {!! Form::open([
+            'method' => 'DELETE',
+            'route' => ['palettes.destroy', $palette->id]
+          ]) !!}
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+        {!! Form::close() !!}
+        </div>
       </div>
     </div>
   </div>
-</div>
-@endif
+  @endif
+@endunless
