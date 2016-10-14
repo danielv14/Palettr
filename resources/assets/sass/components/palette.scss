@@ -1,14 +1,18 @@
 
 .palette {
   background-color: white;
-  @include palette-box-shadow;
+  @include palette-box-shadow(2px);
   width: 100%;
   margin-top: 20px;
   border-radius: $border-radius-base;
-
+  transition: all 0.5s ease;
 
   &:last-child {
     margin-bottom: 20px;
+  }
+
+  &:hover {
+      @include palette-box-shadow(4px);
   }
 
 }
