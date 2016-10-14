@@ -15,17 +15,19 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
+require('./flash-message');
+
 
 const app = new Vue({
     el: '#app',
     methods: {
       // open mobile navigation
-      openNav: function() {
+      openNav: function () {
         $('#overlayNav').width('100%');
       },
 
       // close mobile navigation
-      closeNav: function() {
+      closeNav: function () {
         $('#overlayNav').width('0%');
       }
 

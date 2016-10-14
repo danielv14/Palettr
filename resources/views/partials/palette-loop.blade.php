@@ -6,6 +6,7 @@
       <div class="box" style="background-color: {{$palette->color3}}"></div>
       <div class="box" style="background-color: {{$palette->color4}}"></div>
     </div>
+    {{-- Display color vlaues --}}
     <div class="color-texts">
       <p style="color: {{ $palette->color1 }}">{{ $palette->color1 }}</p>
       <p style="color: {{ $palette->color2 }}">{{ $palette->color2 }}</p>
@@ -26,7 +27,6 @@
           </span>
         @endif
       @endunless
-
 
       <p class="text-muted">Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
       <p class="text-muted">{{ $palette->created_at->diffForHumans() }}</p>
