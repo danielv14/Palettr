@@ -17,13 +17,11 @@
       @unless (Auth::guest())
         @if ($palette->user_id == Auth::user()->id)
           <span class="pull-right">
-            {!! Form::open([
-              'method' => 'DELETE',
-              'route' => ['palettes.destroy', $palette->id]
-            ]) !!}
             <a href="{{ route('palettes.edit', $palette->id) }}" class="btn btn-success btn-sm btn-outline">Edit</a>
-              {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline']) !!}
-            {!! Form::close() !!}
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger btn-sm btn-outline" data-toggle="modal" data-target="#deleteModal">
+              Delete
+            </button>
           </span>
         @endif
       @endunless
@@ -35,3 +33,32 @@
     </div>
   </div>
 @endforeach
+
+{{-- Display a modal with delete functionality unless its a guest --}}
+@unless (Auth::guest())
+  <!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalLabel">Delete palette</h4>
+      </div>
+      <div class="modal-body lead">
+        Are you sure you want to delete the palette?
+        <br>
+        This action cannot be reversed.
+      </div>
+      <div class="modal-footer">
+        {!! Form::open([
+          'method' => 'DELETE',
+          'route' => ['palettes.destroy', $palette->id]
+        ]) !!}
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+      {!! Form::close() !!}
+      </div>
+    </div>
+  </div>
+</div>
+@endunless
