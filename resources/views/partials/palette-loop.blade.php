@@ -6,8 +6,13 @@
       <div class="box" style="background-color: {{$palette->color3}}"></div>
       <div class="box" style="background-color: {{$palette->color4}}"></div>
     </div>
+    <div class="color-texts">
+      <p style="color: {{ $palette->color1 }}">{{ $palette->color1 }}</p>
+      <p style="color: {{ $palette->color2 }}">{{ $palette->color2 }}</p>
+      <p style="color: {{ $palette->color3 }}">{{ $palette->color3 }}</p>
+      <p style="color: {{ $palette->color4 }}">{{ $palette->color4 }}</p>
+    </div>
     <div class="palette-info">
-
       @unless (Auth::guest())
         @if ($palette->user_id == Auth::user()->id)
           <span class="pull-right">

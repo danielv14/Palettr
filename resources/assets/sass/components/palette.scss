@@ -20,12 +20,25 @@
     flex: 1;
     height: 7em;
     width: 25%;
-
   }
 }
 
 .palette-info {
   padding: 1.4rem;
+}
+
+.color-texts {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   p {
+    font-size: 0.7rem;
+    width: 100%;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    &:hover, .box:hover {
+      transform: scale(1.7);
+    }
   }
 }
