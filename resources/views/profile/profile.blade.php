@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
-@section('content')
-  <h1>Viewing profile of {{ $profile->name }}</h1>
+@section('hero-content')
+  <h1>Profile of {{ $profile->name }}</h1>
+  <p>{{ $profile->palettes->count() }} Created palettes</p>
+@endsection
 
-  <p>{{ $profile->name }} has {{ $profile->palettes->count() }} Palettes and they are:</p>
-  <section class="palettes">
-    @foreach ($profile->palettes as $palette)
-      <p>{{ $palette->color1 }}, {{ $palette->color2 }}, {{ $palette->color3 }}, {{ $palette->color4 }}</p>
-      <hr>
-    @endforeach
-  </section>
+@section('content')
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="text-muted">All palettes</h2>
+        @include('partials.palette-loop', ['palettes' => $profile->palettes])
+      </div>
+    </div>
+  </div>
 @endsection

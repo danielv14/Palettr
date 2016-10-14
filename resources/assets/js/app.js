@@ -15,6 +15,34 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    created: function() {
+      this.fadeFlash();
+    },
+
+    methods: {
+      // open mobile navigation
+      openNav: function () {
+        $('#overlayNav').width('100%');
+      },
+
+      // close mobile navigation
+      closeNav: function () {
+        $('#overlayNav').width('0%');
+      },
+
+      fadeFlash: function () {
+        // timed function to fade out the flash messages
+        setTimeout(function() {
+          // target div and fade it out
+          $('#flash').fadeOut("slow", function() {
+            $(this).remove();
+          })
+        }, 1500);
+      }
+    }
+
 });

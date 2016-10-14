@@ -1,0 +1,106 @@
+.navbar {
+  background: none;
+  padding-top: 10px;
+  .toggle, .brand {
+    display: inline-block;
+  }
+  .link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    &:hover,&:active {
+      color: darken(white, 10%);
+    }
+
+  }
+
+  .toggle {
+    padding: 1em;
+    color: white;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 48em) {
+    .navbar {
+      display: flex;
+      margin-left: 50px;
+      margin-right: 50px;
+      .left,.right {
+        display: flex;
+        flex: 1;
+      }
+      .link {
+          width: auto;
+      }
+      .right {
+        justify-content: flex-end;
+      }
+      .toggle {
+        display: none;
+      }
+    }
+}
+
+.navbar {
+  div {
+    display: none;
+    @media (min-width: 48em) {
+      display: flex;
+    }
+  }
+}
+
+
+// Overlay styling
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparentize($primary-color, 0.03);
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: darken(white, 20%);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

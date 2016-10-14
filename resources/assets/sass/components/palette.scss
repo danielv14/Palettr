@@ -1,0 +1,54 @@
+
+.palette {
+  background-color: white;
+  @include palette-box-shadow(2px);
+  width: 100%;
+  margin-top: 20px;
+  border-radius: $border-radius-base;
+  transition: all 0.5s ease;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+      @include palette-box-shadow(4px);
+  }
+
+}
+
+.palette-colors {
+  display: flex;
+
+  .box {
+    flex: 1;
+    height: 7em;
+    width: 25%;
+    &:first-child {
+      border-top-left-radius: $border-radius-base;
+    }
+    &:last-child {
+      border-top-right-radius: $border-radius-base;
+    }
+  }
+}
+
+.palette-info {
+  padding: 1.2rem;
+}
+
+.color-texts {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    &:hover, .box:hover {
+      transform: scale(1.7);
+    }
+  }
+}

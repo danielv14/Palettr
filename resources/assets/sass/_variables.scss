@@ -1,37 +1,54 @@
+/*
+* Colours
+*/
+$primary-color: #9055A2;
+$brand-info: #a5dff9;
+$brand-danger: #ef5285;
+$brand-success: #60c5ba;
+$brand-warning: #feee7d;
 
-// Body
-$body-bg: #f5f8fa;
 
-// Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
+/*
+* Components
+*/
+$border-radius-base: 7px;
 
-// Brands
-$brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
-$brand-warning: #cbb956;
-$brand-danger:  #bf5329;
 
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-$text-color: #636b6f;
 
-// Navbar
-$navbar-default-bg: #fff;
 
-// Buttons
-$btn-default-color: $text-color;
+/*
+* Navigation bar variables
+*/
+$navbar-height: 60px;
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0px;
+$navbar-default-border: none;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: darken(white, 5%);
+$navbar-default-toggle-hover-bg    : none;
+$navbar-default-toggle-icon-bar-bg : white;
+$navbar-default-toggle-border-color: none;
 
-// Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+/*
+* Links
+*/
+$link-color: $primary-color;
+$link-hover-color: darken($primary-color, 10%);
+$link-hover-decoration: none;
 
-// Panels
-$panel-default-heading-bg: #fff;
+
+/*
+* Buttons
+*/
+$btn-border-radius-base: 7px;
+
+
+
+
+/*
+* Forms
+*/
+$input-bg: white;
+$input-border-focus: lighten(gray, 30%);
+$input-height-base: 40px;
+$input-border-radius: 0px;

@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
-@section('content')
+@section('hero-content')
   <h1>My profile</h1>
-  <p>My name is {{Auth::user()->name}}</p>
-  <p>My palettes:</p>
-
-  @foreach (Auth::user()->palettes()->get() as $palette)
-    <p>{{ $palette }}</p>
-    <a href="{{ route('palettes.edit', $palette->id) }}">Edit</a>
-    <br>
-    {!! Form::open([
-      'method' => 'DELETE',
-      'route' => ['palettes.destroy', $palette->id]
-    ]) !!}
-      {!! Form::submit('Delete') !!}
-    {!! Form::close() !!}
-
-  @endforeach
+  <p>{{ Auth::user()->palettes()->count() }} Palettes and 3 favourites</p>
   <br>
-  <a href="{{ route('palettes.create') }}">Create new palette</a>
+  <div class="text-center">
+    <a href="{{ route('palettes.create') }}" class="btn btn-brand">Create new palette</a>
+  </div>
+
+@endsection
+
+@section('content')
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="text-muted">My palettes</h2>
+        @include('partials.palette-loop', ['palettes' => Auth::user()->palettes()->get()])
+      </div>
+    </div>
+  </div>
 @endsection
