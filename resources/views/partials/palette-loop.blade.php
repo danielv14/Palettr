@@ -27,8 +27,10 @@
           </span>
         @endif
       @endunless
-
-      <p class="text-muted">Created by <a href="{{ route('profile', $palette->user->id) }}">{{ $palette->user->name }}</a></p>
+      <a class="text-muted" href="{{ route('profile', $palette->user->id) }}">
+        <img class="avatar avatar-sm" src="{{ Gravatar::get($palette->user->email, 'small') }}" alt="avatar">
+        {{ $palette->user->name }}
+      </a>
       <p class="text-muted">{{ $palette->created_at->diffForHumans() }}</p>
     </div>
   </div>

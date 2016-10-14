@@ -6259,7 +6259,7 @@ body {
   background: -webkit-linear-gradient(bottom, rgba(144, 85, 162, 0.5), rgba(144, 85, 162, 0.5)), url("../img/pens.jpg") no-repeat center center;
   background: linear-gradient(0deg, rgba(144, 85, 162, 0.5), rgba(144, 85, 162, 0.5)), url("../img/pens.jpg") no-repeat center center;
   background-size: cover;
-  height: 60vh; }
+  height: 70vh; }
 
 .hero-content-wrapper {
   height: 100%; }
@@ -6276,7 +6276,7 @@ body {
     height: 90%; }
     .hero-content-wrapper .hero-text a {
       text-decoration: none; }
-    .hero-content-wrapper .hero-text h1, .hero-content-wrapper .hero-text p {
+    .hero-content-wrapper .hero-text h1, .hero-content-wrapper .hero-text h2, .hero-content-wrapper .hero-text p {
       color: white; }
     .hero-content-wrapper .hero-text h1 {
       margin: 0;
@@ -6433,5 +6433,16 @@ body {
   border-radius: 0px; }
   .alert p {
     text-align: center; }
+
+.avatar {
+  border-radius: 50%; }
+
+.avatar-sm {
+  height: 35px;
+  width: 35px; }
+
+.avatar-lg {
+  height: 150px;
+  width: 150px; }
 
 /*# sourceMappingURL=app.css.map */

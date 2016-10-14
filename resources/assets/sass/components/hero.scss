@@ -4,7 +4,7 @@
    transparentize($primary-color, 0.5)),
    url('../img/pens.jpg') no-repeat center center;
   background-size: cover;
-  height: 60vh;
+  height: 70vh;
 }
 
 .hero-content-wrapper {
@@ -21,7 +21,7 @@
       text-decoration: none;
     }
 
-    h1, p {
+    h1, h2, p {
       color: white;
     }
     h1 {
