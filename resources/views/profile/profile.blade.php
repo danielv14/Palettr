@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('hero-content')
-  <img src="{{Gravatar::get($profile->email, 'large')}}" alt="" class="avatar avatar-lg">
+  <img src="{{Gravatar::get($profile->email, 'large')}}" alt="" class="avatar avatar-lg avatar-border">
   <h2>Profile of {{ $profile->name }}</h2>
   <p>{{ $profile->palettes->count() }} Created palettes</p>
 @endsection
