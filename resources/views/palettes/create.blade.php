@@ -7,8 +7,8 @@
 
 @section('content')
   <div class="container">
-    <div class="row content-shadow">
-      <div class="col-md-6 col-md-offset-3">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 content-shadow">
         <br>
         {!! Form::open(['route' => 'palettes.store']) !!}
           @include('palettes.form', ['submit' => 'Create palette'])

@@ -7,8 +7,8 @@
 
 @section('content')
   <div class="container">
-    <div class="row content-shadow">
-      <div class="col-md-8 col-md-offset-2">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 content-shadow">
         <br>
         {!! Form::model($palette, ['method' => 'PATCH', 'route' => ['palettes.update', $palette->id]]) !!}
           @include('palettes.form', ['submit' => 'Update palette'])
