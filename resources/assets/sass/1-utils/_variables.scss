@@ -12,7 +12,7 @@ $brand-warning: #feee7d;
 * Components
 */
 $border-radius-base: 7px;
-
+$border-radius-small: 3px;
 
 
 
@@ -40,7 +40,7 @@ $link-hover-decoration: none;
 /*
 * Buttons
 */
-$btn-border-radius-base: 7px;
+$btn-border-radius-base: $border-radius-base;
 
 
 
@@ -51,4 +51,4 @@ $btn-border-radius-base: 7px;
 $input-bg: white;
 $input-border-focus: lighten(gray, 30%);
 $input-height-base: 40px;
-$input-border-radius: 0px;
+$input-border-radius: $border-radius-small;

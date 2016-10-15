@@ -2733,7 +2733,7 @@ output {
   background-color: white;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 0px;
+  border-radius: 3px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
@@ -3877,7 +3877,7 @@ tbody.collapse.in {
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #ccc;
-  border-radius: 0px; }
+  border-radius: 3px; }
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
@@ -6243,7 +6243,8 @@ body {
 .content-shadow {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
-  margin-top: 20px; }
+  margin-top: 20px;
+  border-radius: 7px; }
 
 html {
   font-size: 100%; }
@@ -6284,7 +6285,7 @@ p, a, label, button {
   height: 70vh; }
 
 .hero-content-wrapper {
-  height: 100%; }
+  height: 90%; }
   .hero-content-wrapper .hero-text {
     display: -webkit-box;
     display: flex;
