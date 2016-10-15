@@ -26,7 +26,7 @@ class PagesController extends Controller
       return view('pages.specific', [
         'header' => 'Popular palettes',
         'subheader' => "Get them while they're hot",
-        'palettes' => Palette::simplePaginate(2)
+        'palettes' => Palette::simplePaginate(10)
       ]);
     }
 
@@ -34,7 +34,7 @@ class PagesController extends Controller
       return view('pages.specific', [
         'header' => 'Most recent palettes',
         'subheader' => 'Steaming fresh from the oven',
-        'palettes' => Palette::simplePaginate(2)
+        'palettes' => Palette::orderBy('created_at', 'DESC')->simplePaginate(10)
       ]);
     }
 }
