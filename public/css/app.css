@@ -6282,7 +6282,7 @@ p, a, label, button {
   background: -webkit-linear-gradient(bottom, rgba(144, 85, 162, 0.5), rgba(144, 85, 162, 0.5)), url("../img/pens.jpg") no-repeat center center;
   background: linear-gradient(0deg, rgba(144, 85, 162, 0.5), rgba(144, 85, 162, 0.5)), url("../img/pens.jpg") no-repeat center center;
   background-size: cover;
-  height: 70vh; }
+  height: 60vh; }
 
 .hero-content-wrapper {
   height: 90%; }
