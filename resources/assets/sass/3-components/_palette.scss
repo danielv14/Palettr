@@ -35,6 +35,29 @@
 
 .palette-info {
   padding: 1.2rem;
+
+  .palette-time {
+    font-size: 0.75rem;
+  }
+}
+
+// Style for edit and delete buttons
+.action-icons {
+
+  a {
+    font-size: 1.15em;
+    color: gray;
+
+    &:hover {
+      color: $primary-color;
+    }
+    // give them some breathing room by giving last child some margin-left
+    &:last-child {
+      margin-left: 1.2em;
+    }
+
+  }
+
 }
 
 .color-texts {

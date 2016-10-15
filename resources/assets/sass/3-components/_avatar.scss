@@ -8,8 +8,19 @@
 }
 
 .avatar-lg {
-  height: 15rem;
-  width: 15rem;
+  height: 10rem;
+  width: 10rem;
+
+  @media (min-width: $screen-md) {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 16rem;
+    width: 16rem;
+  }
+
 }
 
 .avatar-border {

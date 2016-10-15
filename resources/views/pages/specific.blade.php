@@ -6,20 +6,26 @@
 @endsection
 
 @section('content')
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2">
+  <div class="container-fluid">
 
-      {{-- Palette partial that loops through each palette --}}
-      @include('partials.palette-loop', [
-        'palettes' => $palettes,
-        'actions' => false
-      ])
-
-      {{-- Pagination --}}
-      <div class="text-center">
-        {{ $palettes->links() }}
+    <div class="row">
+      <div class="col-lg-12">
+        @foreach ($palettes as $palette)
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            {{-- Palette partial --}}
+            @include('partials.palette', [
+              'actions' => false
+            ])
+          </div>
+        @endforeach
       </div>
     </div>
+
+    {{-- Pagination --}}
+    <div class="text-center">
+      {{ $palettes->links() }}
+    </div>
+
   </div>
 
 @endsection

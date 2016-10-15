@@ -21,16 +21,12 @@ class ProfileController extends Controller
     */
     public function index()
     {
-      return view('profile.index');
+      $palettes = Auth::user()
+        ->palettes()
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+      return view('profile.index', compact('palettes'));
     }
 
-    /*
-    * Display a users profile
-    */
-    public function profile ($id)
-    {
-      return view('profile.profile', [
-        'profile' => User::findOrFail($id)
-      ]);
-    }
 }

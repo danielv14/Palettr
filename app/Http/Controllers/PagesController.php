@@ -15,10 +15,8 @@ class PagesController extends Controller
     public function index ()
     {
       $popular = Palette::orderBy('created_at', 'ASC')->take(3)->get();
-      $recent = Palette::orderBy('created_at', 'DESC')->take(3)->get();
       return view('pages.index', [
-        'popular' => $popular,
-        'recent' => $recent
+        'palettes' => Palette::inRandomOrder()->get()
       ]);
     }
 
@@ -26,7 +24,7 @@ class PagesController extends Controller
       return view('pages.specific', [
         'header' => 'Popular palettes',
         'subheader' => "Get them while they're hot",
-        'palettes' => Palette::simplePaginate(10)
+        'palettes' => Palette::simplePaginate(24)
       ]);
     }
 
@@ -34,7 +32,7 @@ class PagesController extends Controller
       return view('pages.specific', [
         'header' => 'Most recent palettes',
         'subheader' => 'Steaming fresh from the oven',
-        'palettes' => Palette::orderBy('created_at', 'DESC')->simplePaginate(10)
+        'palettes' => Palette::orderBy('created_at', 'DESC')->simplePaginate(24)
       ]);
     }
 }
