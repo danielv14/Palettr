@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-lg-12">
         @foreach ($palettes as $palette)
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-md-4 col-lg-3">
             {{-- Palette partial --}}
             @include('partials.palette', [
               'actions' => false
