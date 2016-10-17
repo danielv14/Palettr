@@ -17,6 +17,18 @@ Route::get('/popular', 'PagesController@popular')->name('popular');
 
 Route::get('/recent', 'PagesController@recent')->name('recent');
 
+Route::group(['prefix' => 'likes'], function() {
+
+  Route::get('/{id}', 'LikesController@getLikes');
+
+  Route::put('/{id}/like', 'LikesController@like');
+
+  Route::put('/{id}/unlike', 'LikesController@unlike');
+
+
+});
+
+
 Auth::routes();
 
 // Wrap profile specific routes

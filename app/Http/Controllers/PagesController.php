@@ -24,7 +24,7 @@ class PagesController extends Controller
       return view('pages.specific', [
         'header' => 'Popular palettes',
         'subheader' => "Get them while they're hot",
-        'palettes' => Palette::simplePaginate(24)
+        'palettes' => Palette::orderBy('likes', 'DESC')->simplePaginate(24)
       ]);
     }
 

@@ -33,6 +33,7 @@
       @endif
     @endunless
     <p class="text-muted palette-time">
+      <like :palette="{{$palette}}"></like>
       <i class="fa fa-clock-o" aria-hidden="true"></i>
       {{ $palette->created_at->diffForHumans() }}
     </p>
