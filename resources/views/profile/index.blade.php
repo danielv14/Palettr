@@ -12,7 +12,6 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <h2 class="text-muted text-center">My palettes</h2>
         @foreach ($palettes as $palette)
           <div class="col-md-4 col-lg-3">
             @include('partials.palette', [
