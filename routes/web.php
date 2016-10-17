@@ -19,10 +19,11 @@ Route::get('/recent', 'PagesController@recent')->name('recent');
 
 Route::group(['prefix' => 'likes'], function() {
 
+  // get number of likes of a palette
   Route::get('/{id}', 'LikesController@getLikes');
-
+  // like a palette
   Route::put('/{id}/like', 'LikesController@like');
-
+  // unlike a palette
   Route::put('/{id}/unlike', 'LikesController@unlike');
 
 

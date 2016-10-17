@@ -1,5 +1,6 @@
 <template>
-  <a class="likes" v-bind:class="{ liked: haveLiked }" href="#" @click.prevent="like(palette.id)"><i class="fa fa-heart"></i> {{likes}}</a>
+
+  <a class="likes" href="#" @click.prevent="like(palette.id)"><i class="fa fa-heart like" v-bind:class="{ liked: haveLiked, bounce: animation }"></i> {{likes}}</a>
 
 </template>
 
@@ -11,7 +12,8 @@
     data: function () {
       return {
         likes: '',
-        haveLiked: false
+        haveLiked: false,
+        animation: false
       }
     },
 
@@ -33,6 +35,7 @@
 
       like: function (id) {
         if (!this.haveLiked) {
+          this.animation = true; // force bounce effect on heart icon
           this.increment(id);
         } else {
           this.decrement(id);
@@ -89,6 +92,7 @@
       getNrOfLikes: function(id) {
 
         this.$http.get('/likes/' + id).then((response) => {
+            // update nr of likes
              this.likes = response.body.likes;
            }, (response) => {
              console.log('error')
@@ -101,24 +105,36 @@
 </script>
 
 <style lang="sass">
-  @import '../../sass/1-utils/variables';
+  @import '../../sass/1-utils/module';
 
   a.likes {
-    border: 1px solid $brand-danger;
-    padding: 4px 10px;
-    color: $brand-danger;
-    border-radius: $border-radius-base;
+    font-size: 1.05rem;
+    color: gray;
     margin-right: 5px;
     transition: all 0.25s ease-in-out;
 
       &:hover {
-        color: white;
-        background-color: $brand-danger;
+        color: $brand-danger;
       }
   }
 
-  a.liked {
-    background-color: $brand-danger;
-    color: white;
+  .like {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .liked {
+    color: $brand-danger;
+  }
+
+  @include bounce-keyframe();
+
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
   }
 </style>
