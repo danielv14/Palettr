@@ -2,6 +2,15 @@
   box-shadow: 0 $amount $amount rgba(0,0,0,.1);
 }
 
+/*
+* Bounce!
+*/
+@mixin bounce() {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
 
 /*
 * Keyframe mixin created from Dan Eden's animate.css

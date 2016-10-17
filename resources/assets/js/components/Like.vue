@@ -132,9 +132,6 @@
   @include bounce-keyframe();
 
   .bounce {
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
+    @include bounce();
   }
 </style>
