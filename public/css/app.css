@@ -6296,7 +6296,7 @@ p, a, label, button {
   height: 60vh; }
 
 .hero-content-wrapper {
-  height: 90%; }
+  height: 85%; }
   .hero-content-wrapper .hero-text {
     display: -webkit-box;
     display: flex;
@@ -6467,7 +6467,7 @@ p, a, label, button {
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out; }
     .color-texts p:hover, .color-texts p .box:hover {
-      -webkit-transform: scale(1.4);
-      transform: scale(1.4); }
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2); }
 
 /*# sourceMappingURL=app.css.map */
