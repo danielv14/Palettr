@@ -123,6 +123,7 @@
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    padding-left: 3px;
   }
 
   .liked {
