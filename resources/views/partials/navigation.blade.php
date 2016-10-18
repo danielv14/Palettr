@@ -9,7 +9,6 @@
       <a href="{{ route('recent') }}" class="link">Recent</a>
       @if (Auth::guest())
         <a href="{{ url('/login') }}" class="link">Login</a>
-        <a href="{{ url('/register') }}" class="link">Register</a>
       @else
         <a href="{{ url('profile') }}" class="link">Profile</a>
         <a href="{{ url('/logout') }}" class="link"
@@ -33,7 +32,6 @@
       <a href="{{ route('recent') }}" class="link">Recent</a>
       @if (Auth::guest())
         <a href="{{ url('/login') }}" class="link">Login</a>
-        <a href="{{ url('/register') }}" class="link">Register</a>
       @else
         <a href="{{ url('profile') }}" class="link">Profile</a>
         <a href="{{ url('/logout') }}" class="link"

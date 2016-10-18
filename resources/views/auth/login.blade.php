@@ -63,6 +63,8 @@
                   </div>
               </div>
           </form>
+          <hr>
+          <p class="text-center">Don't have an account yet? Create one <a href="/register">here</a></p>
           <br>
         </div>
     </div>
