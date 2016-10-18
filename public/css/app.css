@@ -430,6 +430,12 @@ template {
 /*
 * Forms
 */
+/*
+* Bounce!
+*/
+/*
+* Keyframe mixin created from Dan Eden's animate.css
+*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -6283,8 +6289,8 @@ p, a, label, button {
       width: 12rem; } }
   @media (min-width: 1200px) {
     .avatar-lg {
-      height: 16rem;
-      width: 16rem; } }
+      height: 14rem;
+      width: 14rem; } }
 
 .avatar-border {
   border: 4px solid white; }
@@ -6461,13 +6467,13 @@ p, a, label, button {
   -webkit-box-align: center;
   align-items: center; }
   .color-texts p {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     width: 100%;
     text-align: center;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out; }
     .color-texts p:hover, .color-texts p .box:hover {
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2); }
+      -webkit-transform: scale(1.4);
+      transform: scale(1.4); }
 
 /*# sourceMappingURL=app.css.map */

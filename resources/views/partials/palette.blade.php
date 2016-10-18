@@ -17,25 +17,33 @@
       Only display Update and delete buttons
       if auth and action are requested from parent view
     --}}
+    <span class="pull-right">
+      <p class="text-muted palette-time">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        {{ $palette->created_at->diffForHumans() }}
+      </p>
+    </span>
+
+    <p class="text-muted palette-time">
+      <like :palette="{{$palette}}"></like>
+    </p>
+
     @unless (Auth::guest())
       @if ($palette->user_id == Auth::user()->id && $actions == true)
-        <span class="pull-right">
-          <span class="action-icons">
+          <div class="action-icons">
             <a href="{{ route('palettes.edit', $palette->id) }}">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </a>
-            <!-- Button trigger modal -->
-            <a href="#" data-toggle="modal" data-target="#deleteModal">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-            </a>
-          </span>
-        </span>
+            <span class="pull-right">
+              <!-- Button trigger modal -->
+              <a href="#" data-toggle="modal" data-target="#deleteModal">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </a>
+            </span>
+
+          </div>
       @endif
     @endunless
-    <p class="text-muted palette-time">
-      <i class="fa fa-clock-o" aria-hidden="true"></i>
-      {{ $palette->created_at->diffForHumans() }}
-    </p>
 
   </div> {{-- end of palette info --}}
 </div> {{-- end of palette card --}}
