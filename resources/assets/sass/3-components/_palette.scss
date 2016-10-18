@@ -66,12 +66,12 @@
   justify-content: space-between;
   align-items: center;
   p {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     width: 100%;
     text-align: center;
     transition: all .5s ease-in-out;
     &:hover, .box:hover {
-      transform: scale(1.2);
+      transform: scale(1.4);
     }
   }
 }
