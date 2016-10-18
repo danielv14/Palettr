@@ -10,13 +10,18 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
-        @foreach ($palettes as $palette)
-          <div class="col-md-4 col-lg-3">
-            @include('partials.palette', [
-              'actions' => false
-            ])
-          </div>
-        @endforeach
+        @if ($palettes)
+          @foreach ($palettes as $palette)
+            <div class="col-md-4 col-lg-3">
+              @include('partials.palette', [
+                'actions' => false
+              ])
+            </div>
+          @endforeach
+        @else
+          No palettes found
+        @endif
+
       </div>
     </div>
   </div>
