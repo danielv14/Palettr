@@ -19,7 +19,7 @@ class LikesController extends Controller
 
     }
 
-    public function like (Request $request, $id)
+    public function like ($id)
     {
       // find the palette in context
       $palette = Palette::findOrFail($id);
@@ -29,7 +29,7 @@ class LikesController extends Controller
       $palette->save();
     }
 
-    public function unlike (Request $request, $id)
+    public function unlike ($id)
     {
       // find the palette in context
       $palette = Palette::findOrFail($id);
