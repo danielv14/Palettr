@@ -108,7 +108,7 @@
   @import '../../sass/1-utils/module';
 
   a.likes {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: gray;
     margin-right: 5px;
     transition: all 0.25s ease-in-out;

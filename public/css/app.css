@@ -6289,8 +6289,8 @@ p, a, label, button {
       width: 12rem; } }
   @media (min-width: 1200px) {
     .avatar-lg {
-      height: 16rem;
-      width: 16rem; } }
+      height: 14rem;
+      width: 14rem; } }
 
 .avatar-border {
   border: 4px solid white; }
