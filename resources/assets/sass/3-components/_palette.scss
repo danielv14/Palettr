@@ -31,6 +31,15 @@
       border-top-right-radius: $border-radius-base;
     }
   }
+
+  input.box {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    color: white;
+    text-align: center;
+    outline: none;
+  }
 }
 
 .palette-info {

@@ -1,4 +1,10 @@
 
+/**
+ *  Load in jscolor for color picking when creating and updating palettes
+ */
+require('./jscolor.min.js');
+
+
 window._ = require('lodash');
 
 /**

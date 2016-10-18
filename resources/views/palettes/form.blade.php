@@ -1,48 +1,13 @@
+<div class="palette">
 
-<div class="form-group{{ $errors->has('color1') ? ' has-error' : '' }}">
-  {!! Form::label('color1', 'First color') !!}
-  {!! Form::text('color1', null, ['class' => 'form-control']) !!}
-  @if ($errors->has('color1'))
-      <span class="help-block">
-          <strong>{{ $errors->first('color1', 'Please enter a valid color') }}</strong>
-      </span>
-  @endif
+  <div class="palette-colors">
+    {!! Form::text('color1', '#D5D5D5', ['class' => 'box jscolor {hash: true}']) !!}
+    {!! Form::text('color2', '#C1C1C1', ['class' => 'box jscolor {hash: true}']) !!}
+    {!! Form::text('color3', '#ADADAD', ['class' => 'box jscolor {hash: true}']) !!}
+    {!! Form::text('color4', '#9A9A9A', ['class' => 'box jscolor {hash: true}']) !!}
+
+  </div>
+  <br>
+  {!! Form::submit($submit, ['class' => 'btn btn-brand center-block']) !!}
+  <br>
 </div>
-
-<br>
-<div class="form-group{{ $errors->has('color2') ? ' has-error' : '' }}">
-  {!! Form::label('color2', 'Second color') !!}
-  {!! Form::text('color2', null, ['class' => 'form-control']) !!}
-  @if ($errors->has('color2'))
-      <span class="help-block">
-          <strong>{{ $errors->first('color2', 'Please enter a valid color') }}</strong>
-      </span>
-  @endif
-</div>
-
-<br>
-<div class="form-group{{ $errors->has('color3') ? ' has-error' : '' }}">
-  {!! Form::label('color3', 'Third color') !!}
-  {!! Form::text('color3', null, ['class' => 'form-control']) !!}
-  @if ($errors->has('color3'))
-      <span class="help-block">
-          <strong>{{ $errors->first('color3', 'Please enter a valid color') }}</strong>
-      </span>
-  @endif
-</div>
-
-<br>
-<div class="form-group{{ $errors->has('color4') ? ' has-error' : '' }}">
-  {!! Form::label('color4', 'Fourth color') !!}
-  {!! Form::text('color4', null, ['class' => 'form-control']) !!}
-  @if ($errors->has('color4'))
-      <span class="help-block">
-          <strong>{{ $errors->first('color4', 'Please enter a valid color') }}</strong>
-      </span>
-  @endif
-
-</div>
-
-<br>
-
-{!! Form::submit($submit, ['class' => 'btn btn-brand center-block']) !!}

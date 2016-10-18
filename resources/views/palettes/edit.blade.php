@@ -8,12 +8,10 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2 content-shadow">
-        <br>
+      <div class="col-md-8 col-md-offset-2">
         {!! Form::model($palette, ['method' => 'PATCH', 'route' => ['palettes.update', $palette->id]]) !!}
-          @include('palettes.form', ['submit' => 'Update palette'])
+          @include('palettes.form-update', ['submit' => 'Update palette'])
         {!! Form::close() !!}
-        <br>
       </div>
     </div>
   </div>

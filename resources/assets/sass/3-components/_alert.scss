@@ -1,4 +1,4 @@
-.alert {
+.alert-custom {
   position: absolute;
   top: 0px;
   width: 100%;
@@ -6,4 +6,9 @@
   p {
     text-align: center;
   }
+}
+
+.alert {
+  border-radius: 0px;
+  text-align: center;
 }
