@@ -33,7 +33,7 @@ class LikesController extends Controller
     {
       // find the palette in context
       $palette = Palette::findOrFail($id);
-      // increment current like value with 1 new like
+      // decrement current like value with 1 new like
       $palette->likes = $palette->likes - 1;
       // save the palette
       $palette->save();
