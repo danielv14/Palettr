@@ -18,7 +18,6 @@
               'actions' => true
             ])
           </div>
-
         @endforeach
       </div>
     </div>
