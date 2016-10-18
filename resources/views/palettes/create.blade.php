@@ -6,10 +6,11 @@
 @endsection
 
 @section('content')
+  @include('errors.list')
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 content-shadow">
-        <br>
+      <div class="col-md-8 col-md-offset-2">
+        {{-- <color-picker></color-picker> --}}
         {!! Form::open(['route' => 'palettes.store']) !!}
           @include('palettes.form', ['submit' => 'Create palette'])
         {!! Form::close() !!}

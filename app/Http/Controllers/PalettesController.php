@@ -46,6 +46,7 @@ class PalettesController extends Controller
         Auth::user()->palettes()->save($palette);
 
         session()->flash('flash_message', 'Palette has been created');
+        session()->flash('alert-class', 'alert-success');
 
         return redirect()->action('ProfileController@index');
     }
