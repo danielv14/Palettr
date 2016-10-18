@@ -10,8 +10,6 @@ use Auth;
 
 use App\Palette;
 
-use App\User;
-
 
 class ProfileController extends Controller
 {
