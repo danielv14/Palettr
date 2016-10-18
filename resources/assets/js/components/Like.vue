@@ -27,19 +27,23 @@
       // this will toggle unlike state of the button
       if (localStorage.getItem('palettr-like-' + this.palette.id)) {
         this.haveLiked = true;
-        console.log('storage finns');
       }
     },
 
     methods: {
 
       like: function (id) {
+
         if (!this.haveLiked) {
-          this.animation = true; // force bounce effect on heart icon
           this.increment(id);
+          this.animation = true; // force bounce effect on heart icon
+
         } else {
           this.decrement(id);
+          this.animation = false; // if false will bounce on next click
+
         }
+
       },
 
       /*
