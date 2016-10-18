@@ -2,7 +2,7 @@
 
 @section('hero-content')
   <img src="{{Gravatar::get(Auth::user()->email, 'large')}}" alt="" class="avatar avatar-lg avatar-border">
-  <p>{{ Auth::user()->palettes()->count() }} palettes and 3 favourites</p>
+  <p>{{ Auth::user()->palettes()->count() }} palettes and <i class="fa fa-heart heart"></i> {{ $likes }}</p>
   <div class="text-center">
     <a href="{{ route('palettes.create') }}" class="btn btn-brand">Create palette</a>
   </div>

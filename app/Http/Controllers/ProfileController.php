@@ -24,7 +24,12 @@ class ProfileController extends Controller
         ->orderBy('created_at', 'desc')
         ->get();
 
-      return view('profile.index', compact('palettes'));
+        // sum up all likes
+        $likes = Auth::user()
+          ->palettes()
+          ->sum('likes');
+
+      return view('profile.index', compact('palettes', 'likes'));
     }
 
 }
