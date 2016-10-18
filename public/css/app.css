@@ -6478,5 +6478,8 @@ p, a, label, button {
     .color-texts p:hover, .color-texts p .box:hover {
       -webkit-transform: scale(1.4);
       transform: scale(1.4); }
+    @media (min-width: 992px) {
+      .color-texts p {
+        font-size: 0.75rem; } }
 
 /*# sourceMappingURL=app.css.map */
