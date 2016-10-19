@@ -12,13 +12,18 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        @foreach ($palettes as $palette)
-          <div class="col-md-4 col-lg-3">
-            @include('partials.palette', [
-              'actions' => true
-            ])
-          </div>
-        @endforeach
+        @if ($palettes->count() > 0)
+          @foreach ($palettes as $palette)
+            <div class="col-md-4 col-lg-3">
+              @include('partials.palette', [
+                'actions' => true
+              ])
+            </div>
+          @endforeach
+        @else
+          <h2 class="text-muted text-center">You have not created any palettes yet</h2>
+        @endif
+
       </div>
     </div>
   </div>
