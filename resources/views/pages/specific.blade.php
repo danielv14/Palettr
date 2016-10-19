@@ -19,7 +19,8 @@
             </div>
           @endforeach
         @else
-          <h2 class="text-muted text-center">You have not created any palettes yet</h2>
+          <h2 class="text-muted text-center">No palettes has been created yey.</h2>
+          <p class="text-muted text-center"><a href="/register">Create</a> an account to start creating palettes.</p>
         @endif
 
       </div>
