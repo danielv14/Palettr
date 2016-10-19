@@ -6308,6 +6308,9 @@ p, a, label, button, input {
   background-size: cover;
   height: 60vh; }
 
+.hero-full {
+  height: 100vh; }
+
 .hero-content-wrapper {
   height: 85%; }
   .hero-content-wrapper .hero-text {
