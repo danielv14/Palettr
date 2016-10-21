@@ -81,7 +81,7 @@
     transition: all .5s ease-in-out;
 
     &:hover, .box:hover {
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
 
     @media (min-width: $screen-md) {
