@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'Register | ')
+
+
 @section('hero-content')
   <h1>Register for an account</h1>
   <p>Create your own palettes</p>
