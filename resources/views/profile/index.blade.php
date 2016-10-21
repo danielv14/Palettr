@@ -13,6 +13,7 @@
     <div class="row">
       <div class="col-sm-12">
         @if ($palettes->count() > 0)
+          <h2 class="text-muted text-center">{{ Auth::user()->name }}&#39;s palettes</h2>
           @foreach ($palettes as $palette)
             <div class="col-md-4 col-lg-3">
               @include('partials.palette', [
