@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'Create | ')
+
+
 @section('hero-content')
   <h1>Create palette</h1>
   <p>What beautiful palette will you create today, {{ auth()->user()->name }}?</p>

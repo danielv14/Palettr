@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'Login | ')
+
+
 @section('hero-content')
   <h1>Login</h1>
   <p>Start creating palettes</p>

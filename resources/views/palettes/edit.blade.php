@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'Edit | ')
+
+
 @section('hero-content')
   <h1>Update palette</h1>
   <p>With a little fine-tuning you'll get it right, {{ auth()->user()->name }}!</p>

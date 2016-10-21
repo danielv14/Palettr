@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', $title . ' |')
+
+
 @section('hero-content')
   <h1>{{ $header }}</h1>
   <p>{{ $subheader }}</p>
