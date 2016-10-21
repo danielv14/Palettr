@@ -78,10 +78,10 @@
     font-size: 0.65rem;
     width: 100%;
     text-align: center;
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
 
-    &:hover, .box:hover {
-      transform: scale(1.2);
+    &:hover {
+      transform: scale(1.3);
     }
 
     @media (min-width: $screen-md) {
@@ -89,4 +89,8 @@
     }
 
   }
+}
+
+.scale {
+  transform: scale(1.3);
 }

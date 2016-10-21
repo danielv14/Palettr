@@ -1,16 +1,16 @@
 <div class="palette">
   <div class="palette-colors">
-    <div class="box" style="background-color: {{$palette->color1}}"></div>
-    <div class="box" style="background-color: {{$palette->color2}}"></div>
-    <div class="box" style="background-color: {{$palette->color3}}"></div>
-    <div class="box" style="background-color: {{$palette->color4}}"></div>
+    <div class="box" id="{{$palette->color1}}" style="background-color: {{$palette->color1}}"></div>
+    <div class="box" id="{{$palette->color2}}" style="background-color: {{$palette->color2}}"></div>
+    <div class="box" id="{{$palette->color3}}" style="background-color: {{$palette->color3}}"></div>
+    <div class="box" id="{{$palette->color4}}" style="background-color: {{$palette->color4}}"></div>
   </div>
   {{-- Display color vlaues --}}
   <div class="color-texts">
-    <p style="color: {{ $palette->color1 }}">{{ $palette->color1 }}</p>
-    <p style="color: {{ $palette->color2 }}">{{ $palette->color2 }}</p>
-    <p style="color: {{ $palette->color3 }}">{{ $palette->color3 }}</p>
-    <p style="color: {{ $palette->color4 }}">{{ $palette->color4 }}</p>
+    <p id="{{ substr($palette->color1, 1) }}" style="color: {{ $palette->color1 }}">{{ $palette->color1 }}</p>
+    <p id="{{ substr($palette->color2, 1) }}" style="color: {{ $palette->color2 }}">{{ $palette->color2 }}</p>
+    <p id="{{ substr($palette->color3, 1) }}" style="color: {{ $palette->color3 }}">{{ $palette->color3 }}</p>
+    <p id="{{ substr($palette->color4, 1) }}" style="color: {{ $palette->color4 }}">{{ $palette->color4 }}</p>
   </div>
   <div class="palette-info">
     {{--
