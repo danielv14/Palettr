@@ -20,7 +20,8 @@ class PagesController extends Controller
       ]);
     }
 
-    public function popular () {
+    public function popular ()
+    {
       return view('pages.specific', [
         'header' => 'Popular palettes',
         'subheader' => "Get them while they're hot",
@@ -29,7 +30,8 @@ class PagesController extends Controller
       ]);
     }
 
-    public function recent () {
+    public function recent ()
+    {
       return view('pages.specific', [
         'header' => 'Most recent palettes',
         'subheader' => 'Steaming fresh from the oven',
